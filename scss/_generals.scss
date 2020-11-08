@@ -1,0 +1,115 @@
+@import "constants";
+
+/*===General styles===*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font: $font-text1;
+}
+
+body{
+    background-color: $color-white;
+    color: $color-black;
+    overflow-x: hidden;
+}
+
+/*===Heading===*/
+h1{
+    font: $font-h1;
+    letter-spacing: -0.05px;
+}
+
+h2{
+    font: $font-h2;
+    letter-spacing: -0.06px;
+}
+
+h3{
+    font: $font-h3;
+    letter-spacing: -0.06px;
+}
+
+/*===Text===*/
+.text-highlight{color: $color-primary;}
+
+.text-right{text-align: right;}
+
+/*===Margins===*/
+$sizes: 1, 2, 3, 4;
+$grow: 8px;
+
+@each $size in $sizes {
+  .mr-#{$size} {
+    margin-right: ($grow * $size);
+  }
+  .ml-#{$size} {
+    margin-left: ($grow * $size);
+  }
+  .mt-#{$size} {
+    margin-top: ($grow * $size);
+  }
+  .mb-#{$size} {
+    margin-bottom: ($grow * $size);
+  }
+}
+
+/*===Paddings===*/
+
+@each $size in $sizes {
+  .pr-#{$size} {
+    padding-right: ($grow * $size);
+  }
+  .pl-#{$size} {
+    padding-left: ($grow * $size);
+  }
+  .pt-#{$size} {
+    padding-top: ($grow * $size);
+  }
+  .pb-#{$size} {
+    padding-bottom: ($grow * $size);
+  }
+}
+
+/*===Elements===*/
+
+button{
+    font: $font-text2;
+    line-height: 28px;
+    letter-spacing: 1.01px;
+    color: inherit;
+    outline: none;
+    cursor: pointer;
+    &.btn-arrow{
+        margin-top: 44px;
+        padding: 10px 30px;
+        border-radius: 26.5px;
+        background-color: transparent;
+        transition: background 1s ease;
+        &:hover{
+            background-color: rgba($color: $color-primary, $alpha: 0.5);
+        }
+    }
+    &.white{
+        border: solid 1px $color-white;
+        path{
+            fill: $color-white;
+        }
+    }
+    &.black{
+        border: solid 1px $color-black;
+        path{
+            fill: $color-black;
+        }
+    }
+    
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
