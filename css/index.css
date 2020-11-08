@@ -218,7 +218,7 @@ a {
 
 /*===Header===*/
 header {
-  background-image: url("../img/jpg/group@3x.jpg");
+  background-image: url("../img/jpg/group.jpg");
   background-size: cover;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
@@ -453,9 +453,6 @@ footer .foot-container a.link-social:hover {
 
 /*===Media querys===*/
 @media (max-width: 600px) {
-  header {
-    background-image: url("../img/jpg/group.jpg");
-  }
   header .head-container {
     padding-left: 44px;
     margin-left: 0;
